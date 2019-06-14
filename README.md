@@ -22,16 +22,18 @@ Prepare Data
   ln -s /path_to_coco_dataset/train2017 datasets/coco/train2017
   ln -s /path_to_coco_dataset/test2017 datasets/coco/test2017
   ln -s /path_to_coco_dataset/val2017 datasets/coco/val2017
-  coco dataset can be download from here [link](http://cocodataset.org/#download) or (thanks to) [link](https://blog.csdn.net/u014734886/article/details/78830713)
-  coco dataset description can be found in COCO official website [link](http://cocodataset.org/#home) or in [link](https://zhuanlan.zhihu.com/p/29393415)
-```
+ ```
+coco dataset can be download from here [link](http://cocodataset.org/#download) or (thanks to) [link](https://blog.csdn.net/u014734886/article/details/78830713)
+coco dataset description can be found in COCO official website [link](http://cocodataset.org/#home) or in [link](https://zhuanlan.zhihu.com/p/29393415)
+
 
 Pretrained instance segmentation Models
 ---------------
 ```
   put it in directory >models
-  My training log and pre-trained models can be found here [link](https://pan.baidu.com/s/192lRQozksu5XwpU9EO5neg)(pw:xm3f).
- ```
+```
+My training log and pre-trained models can be found here [link](https://pan.baidu.com/s/192lRQozksu5XwpU9EO5neg)(pw:xm3f).
+
 
 Testing Pretrained Models
 ---------------

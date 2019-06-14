@@ -1,10 +1,6 @@
 Mask Scoring R-CNN (MS R-CNN)
 -----------------
-By [Zhaojin Huang](https://github.com/zjhuang22), [Lichao Huang](https://scholar.google.com/citations?user=F2e_jZMAAAAJ&hl=en), [Yongchao Gong](https://dblp.org/pers/hd/g/Gong:Yongchao), [Chang Huang](https://scholar.google.com/citations?user=IyyEKyIAAAAJ&hl=zh-CN), [Xinggang Wang](http://www.xinggangw.info/index.htm).
-
-CVPR 2019 Oral Paper
-
-This project is based on [maskrcnn-benchmark](https://github.com/facebookresearch/maskrcnn-benchmark).
+Forking from https://github.com/zjhuang22/maskscoring_rcnn
 
 Introduction
 -----------------
@@ -23,73 +19,26 @@ Prepare Data
 ```
   mkdir -p datasets/coco
   ln -s /path_to_coco_dataset/annotations datasets/coco/annotations
-  ln -s /path_to_coco_dataset/train2014 datasets/coco/train2014
-  ln -s /path_to_coco_dataset/test2014 datasets/coco/test2014
-  ln -s /path_to_coco_dataset/val2014 datasets/coco/val2014
+  ln -s /path_to_coco_dataset/train2017 datasets/coco/train2017
+  ln -s /path_to_coco_dataset/test2017 datasets/coco/test2017
+  ln -s /path_to_coco_dataset/val2017 datasets/coco/val2017
+  coco dataset can be download from here [link](http://cocodataset.org/#download) or (thanks to) [link](https://blog.csdn.net/u014734886/article/details/78830713)
+  coco dataset description can be found in COCO official website [link](http://cocodataset.org/#home) or in [link](https://zhuanlan.zhihu.com/p/29393415)
 ```
 
-
-Pretrained Models
+Pretrained instance segmentation Models
 ---------------
 ```
-  mkdir pretrained_models
-  #The pretrained models will be downloaded when running the program.
+  put it in directory >models
 ```
-My training log and pre-trained models can be found here [link](https://1drv.ms/f/s!AntfaTaAXHobhkCKfcPPQQfOfFAB) or [link](https://pan.baidu.com/s/192lRQozksu5XwpU9EO5neg)(pw:xm3f).
+My training log and pre-trained models can be found here [link](https://pan.baidu.com/s/192lRQozksu5XwpU9EO5neg)(pw:xm3f).
 
-
-
-
-Running
-----------------
-Single GPU Training
-```
-  python tools/train_net.py --config-file "configs/e2e_ms_rcnn_R_50_FPN_1x.yaml" SOLVER.IMS_PER_BATCH 2 SOLVER.BASE_LR 0.0025 SOLVER.MAX_ITER 720000 SOLVER.STEPS "(480000, 640000)" TEST.IMS_PER_BATCH 1
-```
-Multi-GPU Training
-```
-  export NGPUS=8
-  python -m torch.distributed.launch --nproc_per_node=$NGPUS tools/train_net.py --config-file "configs/e2e_ms_rcnn_R_50_FPN_1x.yaml" 
-```
-
-
-Results
-------------
-| NetWork  | Method | mAP(mask) | mAP(det)  |
-|----------|--------|-----------|-----------|
-| ResNet-50 FPN | Mask R-CNN | 34.2 | 37.8 |
-| ResNet-50 FPN | MS R-CNN | 35.6 | 37.9 |
-| ResNet-101 FPN | Mask R-CNN | 36.1 | 40.1 |
-| ResNet-101 FPN | MS R-CNN | 37.4 | 40.1 |
-
-
-
-Visualization
--------------
-![alt text](demo/demo.png)
-The left four images show good detection results with high classification scores but low mask quality. Our method aims at solving this problem. The rightmost image shows the case of a good mask with a high classification score. Our method will retrain the high score. As can be seen, scores predicted by our model can better interpret the actual mask quality.
-
-Acknowledgment
--------------
-The work was done during an internship at [Horizon Robotics](http://en.horizon.ai/).
-
-Citations
+Testing Pretrained Models
 ---------------
-If you find MS R-CNN useful in your research, please consider citing:
 ```
-@inproceedings{huang2019msrcnn,
-    author = {Zhaojin Huang and Lichao Huang and Yongchao Gong and Chang Huang and Xinggang Wang},
-    title = {{Mask Scoring R-CNN}},
-    booktitle = {CVPR},
-    year = {2019},
-}   
+  STEP ONE: download pretrained instance segmentation Models
+  STEP TWO: python demo/demo.py
 ```
 
-License
----------------
-maskscoring_rcnn is released under the MIT license. See [LICENSE](LICENSE) for additional details.
 
-Thanks to the Third Party Libs
----------------  
-[maskrcnn-benchmark](https://github.com/facebookresearch/maskrcnn-benchmark)   
-[Pytorch](https://github.com/pytorch/pytorch)   
+

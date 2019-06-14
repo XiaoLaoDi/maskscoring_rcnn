@@ -5,6 +5,7 @@ wget https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.sh;
 conda create --name maskrcnn_benchmark
 source activate maskrcnn_benchmark
 
+```bash
 # this installs the right pip and dependencies for the fresh python
 conda install ipython
 
@@ -30,3 +31,4 @@ cd maskscoring_rcnn
 # the files if you want and won't need to
 # re-build it
 python setup.py build develop
+```

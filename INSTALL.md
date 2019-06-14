@@ -2,10 +2,10 @@
 wget https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.sh;
 
 # Step 2: 创建虚拟环境并利用conda和pip安装需要的包
+```bash
 conda create --name maskrcnn_benchmark
 source activate maskrcnn_benchmark
 
-```bash
 # this installs the right pip and dependencies for the fresh python
 conda install ipython
 

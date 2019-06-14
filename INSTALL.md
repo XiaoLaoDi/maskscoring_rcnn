@@ -1,5 +1,7 @@
 # Step 1: 安装Anaconda（Python3.7.3）
+```bash
 wget https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.sh;
+```
 
 # Step 2: 创建虚拟环境并利用conda和pip安装需要的包
 ```bash

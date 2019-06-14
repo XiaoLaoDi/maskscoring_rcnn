@@ -31,9 +31,11 @@ coco dataset description can be found in COCO official website [link](http://coc
 Pretrained instance segmentation Models
 ---------------
 ```
-  put it in directory >models
+  STEP ONE: mkdir models
+  STEP TWO: download my coco2017 pretrained instance segmentation models
+  STEP THREE: put it in directory ---> models
 ```
-My training log and pre-trained models can be found here [link](https://pan.baidu.com/s/192lRQozksu5XwpU9EO5neg)(pw:xm3f).
+My coco2017 training log and pre-trained models can be found here [link](https://pan.baidu.com/s/192lRQozksu5XwpU9EO5neg)(pw:xm3f).
 
 
 Testing Pretrained Models

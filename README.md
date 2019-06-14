@@ -35,7 +35,7 @@ Pretrained instance segmentation Models
   STEP TWO: download my coco2017 pretrained instance segmentation models
   STEP THREE: put it in directory ---> models
 ```
-My coco2017 training log and pre-trained models can be found here [link](https://pan.baidu.com/s/192lRQozksu5XwpU9EO5neg)(pw:xm3f).
+My coco2017 training log and pre-trained models can be found here [link](链接:https://pan.baidu.com/s/14UqK2I1yZN1ykoxocJX0gw)(pw:53hd).
 
 
 Testing Pretrained Models

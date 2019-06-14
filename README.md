@@ -30,8 +30,8 @@ Pretrained instance segmentation Models
 ---------------
 ```
   put it in directory >models
-```
-My training log and pre-trained models can be found here [link](https://pan.baidu.com/s/192lRQozksu5XwpU9EO5neg)(pw:xm3f).
+  My training log and pre-trained models can be found here [link](https://pan.baidu.com/s/192lRQozksu5XwpU9EO5neg)(pw:xm3f).
+ ```
 
 Testing Pretrained Models
 ---------------
@@ -39,6 +39,6 @@ Testing Pretrained Models
   STEP ONE: download pretrained instance segmentation Models
   STEP TWO: python demo/demo.py
 ```
-
+![alt text](demo/result.png)
 
 
